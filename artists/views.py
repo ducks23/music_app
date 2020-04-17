@@ -1,12 +1,12 @@
 from __future__ import unicode_literals
 from django.shortcuts import render
-
+from rest_framework.decorators import api_view
 from django.shortcuts import render
 from .models import *
 from .serializers import *
 from rest_framework import generics
 # Create your views here.
-
+from rest_framework.response import Response
 
 class MusicianListView(generics.ListCreateAPIView):
     queryset = Musician.objects.all()
@@ -34,3 +34,18 @@ class SongListView(generics.ListCreateAPIView):
 class SongView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = SongSerializer
     queryset = Song.objects.all()
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def album_detail(request, musician_pk, album_pk):
+    '''
+    this gets album detail with a specific artist in mind
+    '''
+    try:
+        musician = Musician.objects.get(id=musician_pk)
+    except:
+        print("soooorrry bud")
+    serializer = MusicianSerializer(instance=musician)
+    albums = serializer.data['album_musician']
+    print(albums[album_pk])
+    return Response(albums[album_pk])
+
