@@ -40,12 +40,14 @@ def album_detail(request, musician_pk, album_pk):
     '''
     this gets album detail with a specific artist in mind
     '''
-    try:
-        musician = Musician.objects.get(id=musician_pk)
-    except:
-        print("soooorrry bud")
-    serializer = MusicianSerializer(instance=musician)
-    albums = serializer.data['album_musician']
-    print(albums[album_pk])
-    return Response(albums[album_pk])
+
+    if request.method == 'GET':
+        try:
+            musician = Musician.objects.get(id=musician_pk)
+        except:
+            print("no musician object found")
+        serializer = MusicianSerializer(instance=musician)
+        albums = serializer.data['album_musician']
+        print(albums[album_pk])
+        return Response(albums[album_pk])
 
