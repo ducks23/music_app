@@ -73,13 +73,14 @@ class AlbumDetail(APIView):
         print(musician_pk, album_pk)
         print('pkkkkkkkkkkkkkkkkkkkkkkkkk')
         try:
-            musician = Musician.objects.get(id=musician_pk)
+            musician = Musician.objects.get(pk=musician_pk)
         except:
             print("no musician object found")
         serializer = MusicianSerializer(instance=musician)
         albums = serializer.data['album_musician']
-        return Response(albums[album_pk])
-    
+     #   return Response(albums[album_pk])
+        albums = AlbumSerializer(Album.objects.get(pk=album_pk))
+        return Response(albums.data)
     
     def post(self, request, musician_pk, album_pk, format=None):
         serializer = AlbumSerializer(data=request.data)
@@ -90,7 +91,7 @@ class AlbumDetail(APIView):
 
     
     def delete(self, request, musician_pk, album_pk, format=None):
-        album = Album.objects.get(pk=album_pk)
+        album = Album.objects.get(id=album_pk)
         album.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
     
