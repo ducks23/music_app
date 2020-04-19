@@ -23,6 +23,12 @@ class AlbumSerializer(serializers.ModelSerializer):
             for song_data in songs_data:
                 Song.objects.create(album=song, **song_data)
         return album
+    def update(self, instance,  validated_data):
+        instance.name = validated_data.get('name', instance.name)
+        instance.release_date = validated_data.get('release_date', instance.release_date)
+        instance.num_stars = validated_data.get('num_stars', instance.num_stars)
+        instance.save()
+        return instance
 
 
 class MusicianSerializer(serializers.ModelSerializer):
@@ -60,27 +66,3 @@ class MusicianSerializer(serializers.ModelSerializer):
             album.save()
         return instance
 
-from rest_framework.reverse import reverse
-
-class CustomerHyperlink(serializers.HyperlinkedRelatedField):
-    view_name = 'album-detail'
-    queryset = Album.objects.all()
-
-    def get_url(self, obj, view_name, request, format):
-        print(obj, view_name, request)
-        print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-        url_kwargs = {
-            'pk': obj.artist.pk,
-            'album_pk': obj.pk
-        }
-        return reverse(view_name, kwargs=url_kwargs, request=request, format=format)
-
-    def get_object(self, view_name, view_args, view_kwargs):
-
-        lookup_kwargs = {
-           '_pk': view_kwargs['pk'],
-           'album_pk': view_kwargs['album_pk']
-        }
-        print("oooooooooooooooooooooooooooooooooo")
-        print(lookup_kwargs)
-        return self.get_queryset().get(**lookup_kwargs) 
