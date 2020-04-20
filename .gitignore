@@ -1,0 +1,8 @@
+*.sqlite3
+db.*
+venv/
+.serverless/
+__pycache__/
+**/__pycache__/
+node_modules/
+
