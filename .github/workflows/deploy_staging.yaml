@@ -20,7 +20,7 @@ jobs:
         run: |
           sudo apt-get update \
           && sudo apt-get install -y \
-            python-tox
+            python-tox python3-pip
       - run: make lint
   deploy:
     name: deploy
