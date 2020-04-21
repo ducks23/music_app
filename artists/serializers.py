@@ -4,7 +4,7 @@ from rest_framework import serializers, fields
 class SongSerializer(serializers.ModelSerializer):
     class Meta:
         model = Song
-        fields = ('id', 'from_album',  'name', 'num_stars')
+        fields = ('id',  'name', 'num_stars', 'from_album')
 
 class AlbumSerializer(serializers.ModelSerializer):
     song_album = SongSerializer(read_only=True, many=True)
@@ -15,7 +15,7 @@ class AlbumSerializer(serializers.ModelSerializer):
         songs_data = None
         #use a try catch so that code doesn't break if there is no song data
         try:
-            songs_data = validated_data.pop('song_from_album')
+            songs_data = validated_data.pop('song_album')
         except:
             print("key error for song data")
         album = Album.objects.create(**validated_data)
@@ -24,10 +24,17 @@ class AlbumSerializer(serializers.ModelSerializer):
                 Song.objects.create(album=song, **song_data)
         return album
     def update(self, instance,  validated_data):
+        songs_data = validated_data.pop('song_album')
+        songs = (instance.song_album).all()
+        songs = list(songs)
         instance.name = validated_data.get('name', instance.name)
-        instance.release_date = validated_data.get('release_date', instance.release_date)
         instance.num_stars = validated_data.get('num_stars', instance.num_stars)
         instance.save()
+        for song_data in songs_data:
+            song = songs.pop(0)
+            song.name = song_data.get('name', song.name)
+            song.num_stars = song_data.get('num_stars', song.num_stars)
+            song.save()
         return instance
 
 
