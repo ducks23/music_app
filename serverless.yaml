@@ -89,7 +89,7 @@ custom:
     dockerizePip: true
     layer: true
     pythonBin: python3
-    fileName: requirements/requirements.txt
+    fileName: requirements/test-requirements.txt
     # https://biercoff.com/how-to-fix-package-not-found-error-importlib-metadata/
     zip: false
     slim: false
