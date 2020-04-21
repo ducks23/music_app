@@ -4,8 +4,6 @@ from . import views
 urlpatterns = [
     path('musicians/', views.MusicianListView.as_view()),
     path('musicians/<int:pk>/', views.MusicianView.as_view()),
-    path('songs/', views.SongListView.as_view()),
-    path('songs/<int:pk>/', views.SongView.as_view()),
     path(
         'musicians/<int:musician_pk>/albums/',
         views.AlbumList.as_view()
