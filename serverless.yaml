@@ -60,9 +60,6 @@ package:
     - .git/**
     - '*.swp'
     - .gitignore
-    - env/**
-    - venv/**
-    - testenv/**
 
 functions:
   api:

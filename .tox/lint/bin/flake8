@@ -1,4 +1,4 @@
-#!/home/bdx/allcode/github/jesse/nested_api_django/.tox/lint/bin/python3
+#!/home/jesse/django/api/.tox/lint/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
