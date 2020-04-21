@@ -1,0 +1,21 @@
+{
+  "name": "music-app",
+  "description": "Music App",
+  "version": "0.1.0",
+  "dependencies": {
+    "serverless": "^1.67.3",
+    "serverless-plugin-resource-tagging": "^1.0.11",
+    "serverless-python-requirements": "^5.0.1",
+    "serverless-s3-sync": "^1.10.2",
+    "serverless-wsgi": "^1.7.4"
+  },
+  "devDependencies": {
+    "serverless-single-page-app-plugin": "file:./serverless-single-page-app-plugin",
+    "serverless-db-info-plugin": "file:./serverless-db-info-plugin"
+  },
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ducks23/music-app"
+  }
+}

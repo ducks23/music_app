@@ -1,11 +1,10 @@
-#!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
+#!/usr/bin/env python3
 import os
 import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'api.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'music_app.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
