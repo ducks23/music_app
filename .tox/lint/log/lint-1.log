@@ -2,14 +2,14 @@ action: lint, msg: getenv
 cwd: /home/jesse/django/api
 cmd: /home/jesse/django/api/.tox/lint/bin/python -m pip install flake8
 Collecting flake8
-  Downloading flake8-3.7.9-py2.py3-none-any.whl (69 kB)
+  Using cached flake8-3.7.9-py2.py3-none-any.whl (69 kB)
 Collecting pycodestyle<2.6.0,>=2.5.0
-  Downloading pycodestyle-2.5.0-py2.py3-none-any.whl (51 kB)
+  Using cached pycodestyle-2.5.0-py2.py3-none-any.whl (51 kB)
 Collecting pyflakes<2.2.0,>=2.1.0
-  Downloading pyflakes-2.1.1-py2.py3-none-any.whl (59 kB)
+  Using cached pyflakes-2.1.1-py2.py3-none-any.whl (59 kB)
 Collecting mccabe<0.7.0,>=0.6.0
-  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+  Using cached mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
 Collecting entrypoints<0.4.0,>=0.3.0
-  Downloading entrypoints-0.3-py2.py3-none-any.whl (11 kB)
+  Using cached entrypoints-0.3-py2.py3-none-any.whl (11 kB)
 Installing collected packages: pycodestyle, pyflakes, mccabe, entrypoints, flake8
 Successfully installed entrypoints-0.3 flake8-3.7.9 mccabe-0.6.1 pycodestyle-2.5.0 pyflakes-2.1.1

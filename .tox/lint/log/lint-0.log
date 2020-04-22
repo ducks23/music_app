@@ -1,7 +1,7 @@
 action: lint, msg: getenv
 cwd: /home/jesse/django/api/.tox
 cmd: /usr/bin/python3 -m virtualenv --no-download --python /usr/bin/python3 lint
-created virtual environment CPython3.6.9.final.0-64 in 252ms
+created virtual environment CPython3.6.9.final.0-64 in 266ms
   creator CPython3Posix(dest=/home/jesse/django/api/.tox/lint, clear=False, global=False)
   seeder FromAppData(download=False, pip=latest, setuptools=latest, wheel=latest, via=copy, app_data_dir=/home/jesse/.local/share/virtualenv/seed-app-data/v1.0.1)
   activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator

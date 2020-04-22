@@ -50,11 +50,13 @@ class Migration(migrations.Migration):
                                     verbose_name='ID')),
                 ('name', models.CharField(max_length=100)),
                 ('num_stars', models.IntegerField()),
-                ('from_album', models.ForeignKey(
-                                                blank=True,
-                                                null=True,
-                                                on_delete=django.db.models.deletion.CASCADE,
-                                                related_name='song_album', to='artists.Album')),
+                ('from_album',
+                    models.ForeignKey(
+                                    blank=True,
+                                    null=True,
+                                    on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='song_album',
+                                    to='artists.Album')),
             ],
         ),
         migrations.AddField(
