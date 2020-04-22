@@ -15,7 +15,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Album',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id',
+                    models.AutoField(
+                                    auto_created=True,
+                                    primary_key=True,
+                                    serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=100)),
                 ('release_date', models.DateField()),
                 ('num_stars', models.IntegerField()),
@@ -24,7 +28,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Musician',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id',
+                    models.AutoField(
+                                    auto_created=True,
+                                    primary_key=True,
+                                    serialize=False,
+                                    verbose_name='ID')),
                 ('first_name', models.CharField(max_length=50)),
                 ('last_name', models.CharField(max_length=50)),
                 ('instrument', models.CharField(max_length=100)),
@@ -33,15 +42,29 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Song',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id',
+                    models.AutoField(
+                                    auto_created=True,
+                                    primary_key=True,
+                                    serialize=False,
+                                    verbose_name='ID')),
                 ('name', models.CharField(max_length=100)),
                 ('num_stars', models.IntegerField()),
-                ('from_album', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='song_album', to='artists.Album')),
+                ('from_album', models.ForeignKey(
+                                                blank=True,
+                                                null=True,
+                                                on_delete=django.db.models.deletion.CASCADE,
+                                                related_name='song_album', to='artists.Album')),
             ],
         ),
         migrations.AddField(
             model_name='album',
             name='artist',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='album_musician', to='artists.Musician'),
+            field=models.ForeignKey(
+                                    blank=True,
+                                    null=True,
+                                    on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='album_musician',
+                                    to='artists.Musician'),
         ),
     ]
