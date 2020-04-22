@@ -10,15 +10,15 @@ urlpatterns = [
         ),
     path(
         'musicians/<int:musician_pk>/albums/<int:album_pk>',
-        views.AlbumDetail.as_view(), name='album-detail'
+        views.AlbumDetail.as_view()
         ),
     path(
         'musicians/<int:musician_pk>/albums/<int:album_pk>/songs',
-        views.SongList.as_view(), name='song-list'
+        views.SongList.as_view()
         ),
     path(
         'musicians/<int:musician_pk>/' +
         'albums/<int:album_pk>/songs/<int:song_pk>',
-        views.SongDetail.as_view(), name='song-list'
+        views.SongDetail.as_view()
         )
 ]
