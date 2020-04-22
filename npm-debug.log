@@ -1,0 +1,675 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'i' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData serverless
+20 silly mapToRegistry name serverless
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/serverless
+24 silly fetchNamedPackageData serverless-plugin-resource-tagging
+25 silly mapToRegistry name serverless-plugin-resource-tagging
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/serverless-plugin-resource-tagging
+29 silly fetchNamedPackageData serverless-python-requirements
+30 silly mapToRegistry name serverless-python-requirements
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry uri https://registry.npmjs.org/serverless-python-requirements
+34 silly fetchNamedPackageData serverless-s3-sync
+35 silly mapToRegistry name serverless-s3-sync
+36 silly mapToRegistry using default registry
+37 silly mapToRegistry registry https://registry.npmjs.org/
+38 silly mapToRegistry uri https://registry.npmjs.org/serverless-s3-sync
+39 silly fetchNamedPackageData serverless-wsgi
+40 silly mapToRegistry name serverless-wsgi
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry uri https://registry.npmjs.org/serverless-wsgi
+44 silly fetchOtherPackageData serverless-db-info-plugin@file://serverless-db-info-plugin
+45 silly cache add args [ 'serverless-db-info-plugin@file://serverless-db-info-plugin',
+45 silly cache add   null ]
+46 verbose cache add spec serverless-db-info-plugin@file://serverless-db-info-plugin
+47 silly fetchOtherPackageData serverless-single-page-app-plugin@file://serverless-single-page-app-plugin
+48 silly cache add args [ 'serverless-single-page-app-plugin@file://serverless-single-page-app-plugin',
+48 silly cache add   null ]
+49 verbose cache add spec serverless-single-page-app-plugin@file://serverless-single-page-app-plugin
+50 silly cache add parsed spec Result {
+50 silly cache add   raw: 'serverless-db-info-plugin@file://serverless-db-info-plugin',
+50 silly cache add   scope: null,
+50 silly cache add   name: 'serverless-db-info-plugin',
+50 silly cache add   rawSpec: 'file://serverless-db-info-plugin',
+50 silly cache add   spec: '/',
+50 silly cache add   type: 'local' }
+51 silly cache add parsed spec Result {
+51 silly cache add   raw: 'serverless-single-page-app-plugin@file://serverless-single-page-app-plugin',
+51 silly cache add   scope: null,
+51 silly cache add   name: 'serverless-single-page-app-plugin',
+51 silly cache add   rawSpec: 'file://serverless-single-page-app-plugin',
+51 silly cache add   spec: '/',
+51 silly cache add   type: 'local' }
+52 verbose request uri https://registry.npmjs.org/serverless
+53 verbose request no auth needed
+54 info attempt registry request try #1 at 5:24:04 PM
+55 verbose request id 322e8a237c83fb2b
+56 verbose etag W/"656d35d8bcf96d4284819fbd718cc80b"
+57 verbose lastModified Wed, 08 Apr 2020 10:45:53 GMT
+58 http request GET https://registry.npmjs.org/serverless
+59 verbose request uri https://registry.npmjs.org/serverless-plugin-resource-tagging
+60 verbose request no auth needed
+61 info attempt registry request try #1 at 5:24:04 PM
+62 verbose etag W/"298c3fc5706c5bbaca0e6a66baa846b0"
+63 verbose lastModified Sun, 19 May 2019 05:17:46 GMT
+64 http request GET https://registry.npmjs.org/serverless-plugin-resource-tagging
+65 verbose request uri https://registry.npmjs.org/serverless-s3-sync
+66 verbose request no auth needed
+67 info attempt registry request try #1 at 5:24:04 PM
+68 verbose etag W/"d9c2a9f464a8c9b62f48a81cbf56f64d"
+69 verbose lastModified Mon, 16 Mar 2020 14:53:48 GMT
+70 http request GET https://registry.npmjs.org/serverless-s3-sync
+71 verbose request uri https://registry.npmjs.org/serverless-python-requirements
+72 verbose request no auth needed
+73 info attempt registry request try #1 at 5:24:04 PM
+74 verbose etag W/"b5e5d007e867ac61a1ea8eac8549d80b"
+75 verbose lastModified Wed, 19 Feb 2020 15:26:16 GMT
+76 http request GET https://registry.npmjs.org/serverless-python-requirements
+77 verbose request uri https://registry.npmjs.org/serverless-wsgi
+78 verbose request no auth needed
+79 info attempt registry request try #1 at 5:24:04 PM
+80 verbose etag W/"68467b69664b514ffe2d569c9f2e1fb3"
+81 verbose lastModified Mon, 18 Nov 2019 16:19:02 GMT
+82 http request GET https://registry.npmjs.org/serverless-wsgi
+83 error addLocal Could not install /
+84 silly fetchPackageMetaData Error: EISDIR: illegal operation on a directory, read
+84 silly fetchPackageMetaData  error for serverless-db-info-plugin@file://serverless-db-info-plugin { Error: EISDIR: illegal operation on a directory, read errno: -21, code: 'EISDIR', syscall: 'read' }
+85 error addLocal Could not install /
+86 silly fetchPackageMetaData Error: EISDIR: illegal operation on a directory, read
+86 silly fetchPackageMetaData  error for serverless-single-page-app-plugin@file://serverless-single-page-app-plugin { Error: EISDIR: illegal operation on a directory, read errno: -21, code: 'EISDIR', syscall: 'read' }
+87 http 304 https://registry.npmjs.org/serverless-s3-sync
+88 verbose headers { date: 'Wed, 22 Apr 2020 00:24:04 GMT',
+88 verbose headers   connection: 'keep-alive',
+88 verbose headers   'set-cookie':
+88 verbose headers    [ '__cfduid=d090b73c91c2e0ca04663d28a080fb5181587515044; expires=Fri, 22-May-20 00:24:04 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+88 verbose headers   'cf-ray': '587b3324cc588d27-PDX',
+88 verbose headers   age: '16',
+88 verbose headers   'cache-control': 'public, max-age=300',
+88 verbose headers   etag: '"d9c2a9f464a8c9b62f48a81cbf56f64d"',
+88 verbose headers   'last-modified': 'Mon, 16 Mar 2020 14:53:48 GMT',
+88 verbose headers   vary: 'Accept-Encoding',
+88 verbose headers   'cf-cache-status': 'HIT',
+88 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+88 verbose headers   server: 'cloudflare',
+88 verbose headers   'cf-request-id': '0240de4aff00008d27852c7200000001' }
+89 silly get cb [ 304,
+89 silly get   { date: 'Wed, 22 Apr 2020 00:24:04 GMT',
+89 silly get     connection: 'keep-alive',
+89 silly get     'set-cookie':
+89 silly get      [ '__cfduid=d090b73c91c2e0ca04663d28a080fb5181587515044; expires=Fri, 22-May-20 00:24:04 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+89 silly get     'cf-ray': '587b3324cc588d27-PDX',
+89 silly get     age: '16',
+89 silly get     'cache-control': 'public, max-age=300',
+89 silly get     etag: '"d9c2a9f464a8c9b62f48a81cbf56f64d"',
+89 silly get     'last-modified': 'Mon, 16 Mar 2020 14:53:48 GMT',
+89 silly get     vary: 'Accept-Encoding',
+89 silly get     'cf-cache-status': 'HIT',
+89 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+89 silly get     server: 'cloudflare',
+89 silly get     'cf-request-id': '0240de4aff00008d27852c7200000001' } ]
+90 verbose etag https://registry.npmjs.org/serverless-s3-sync from cache
+91 verbose get saving serverless-s3-sync to /home/jesse/.npm/registry.npmjs.org/serverless-s3-sync/.cache.json
+92 http 304 https://registry.npmjs.org/serverless
+93 verbose headers { date: 'Wed, 22 Apr 2020 00:24:04 GMT',
+93 verbose headers   connection: 'keep-alive',
+93 verbose headers   'set-cookie':
+93 verbose headers    [ '__cfduid=d1318b5e74de0e73aa3cb2d4e95ee6f351587515044; expires=Fri, 22-May-20 00:24:04 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+93 verbose headers   'cf-ray': '587b3324dc53fda9-PDX',
+93 verbose headers   age: '16',
+93 verbose headers   'cache-control': 'public, max-age=300',
+93 verbose headers   etag: '"656d35d8bcf96d4284819fbd718cc80b"',
+93 verbose headers   'last-modified': 'Wed, 08 Apr 2020 10:45:53 GMT',
+93 verbose headers   vary: 'Accept-Encoding',
+93 verbose headers   'cf-cache-status': 'HIT',
+93 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+93 verbose headers   server: 'cloudflare',
+93 verbose headers   'cf-request-id': '0240de4b060000fda9e2922200000001' }
+94 silly get cb [ 304,
+94 silly get   { date: 'Wed, 22 Apr 2020 00:24:04 GMT',
+94 silly get     connection: 'keep-alive',
+94 silly get     'set-cookie':
+94 silly get      [ '__cfduid=d1318b5e74de0e73aa3cb2d4e95ee6f351587515044; expires=Fri, 22-May-20 00:24:04 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+94 silly get     'cf-ray': '587b3324dc53fda9-PDX',
+94 silly get     age: '16',
+94 silly get     'cache-control': 'public, max-age=300',
+94 silly get     etag: '"656d35d8bcf96d4284819fbd718cc80b"',
+94 silly get     'last-modified': 'Wed, 08 Apr 2020 10:45:53 GMT',
+94 silly get     vary: 'Accept-Encoding',
+94 silly get     'cf-cache-status': 'HIT',
+94 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+94 silly get     server: 'cloudflare',
+94 silly get     'cf-request-id': '0240de4b060000fda9e2922200000001' } ]
+95 verbose etag https://registry.npmjs.org/serverless from cache
+96 verbose get saving serverless to /home/jesse/.npm/registry.npmjs.org/serverless/.cache.json
+97 http 304 https://registry.npmjs.org/serverless-wsgi
+98 verbose headers { date: 'Wed, 22 Apr 2020 00:24:04 GMT',
+98 verbose headers   connection: 'keep-alive',
+98 verbose headers   'set-cookie':
+98 verbose headers    [ '__cfduid=db2a2cc4e02c674b6f27de436804514b31587515044; expires=Fri, 22-May-20 00:24:04 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+98 verbose headers   'cf-ray': '587b33250b5d8d2d-PDX',
+98 verbose headers   age: '5885',
+98 verbose headers   'cache-control': 'public, max-age=300',
+98 verbose headers   etag: '"68467b69664b514ffe2d569c9f2e1fb3"',
+98 verbose headers   'last-modified': 'Mon, 18 Nov 2019 16:19:02 GMT',
+98 verbose headers   vary: 'Accept-Encoding',
+98 verbose headers   'cf-cache-status': 'HIT',
+98 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+98 verbose headers   server: 'cloudflare',
+98 verbose headers   'cf-request-id': '0240de4b2700008d2dcdba6200000001' }
+99 silly get cb [ 304,
+99 silly get   { date: 'Wed, 22 Apr 2020 00:24:04 GMT',
+99 silly get     connection: 'keep-alive',
+99 silly get     'set-cookie':
+99 silly get      [ '__cfduid=db2a2cc4e02c674b6f27de436804514b31587515044; expires=Fri, 22-May-20 00:24:04 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+99 silly get     'cf-ray': '587b33250b5d8d2d-PDX',
+99 silly get     age: '5885',
+99 silly get     'cache-control': 'public, max-age=300',
+99 silly get     etag: '"68467b69664b514ffe2d569c9f2e1fb3"',
+99 silly get     'last-modified': 'Mon, 18 Nov 2019 16:19:02 GMT',
+99 silly get     vary: 'Accept-Encoding',
+99 silly get     'cf-cache-status': 'HIT',
+99 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+99 silly get     server: 'cloudflare',
+99 silly get     'cf-request-id': '0240de4b2700008d2dcdba6200000001' } ]
+100 verbose etag https://registry.npmjs.org/serverless-wsgi from cache
+101 verbose get saving serverless-wsgi to /home/jesse/.npm/registry.npmjs.org/serverless-wsgi/.cache.json
+102 http 304 https://registry.npmjs.org/serverless-python-requirements
+103 verbose headers { date: 'Wed, 22 Apr 2020 00:24:04 GMT',
+103 verbose headers   connection: 'keep-alive',
+103 verbose headers   'set-cookie':
+103 verbose headers    [ '__cfduid=dc638c62b4d379d9a2b3470f5ee2fa5831587515044; expires=Fri, 22-May-20 00:24:04 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+103 verbose headers   'cf-ray': '587b33250f11fdbd-PDX',
+103 verbose headers   age: '5884',
+103 verbose headers   'cache-control': 'public, max-age=300',
+103 verbose headers   etag: '"b5e5d007e867ac61a1ea8eac8549d80b"',
+103 verbose headers   'last-modified': 'Wed, 19 Feb 2020 15:26:16 GMT',
+103 verbose headers   vary: 'Accept-Encoding',
+103 verbose headers   'cf-cache-status': 'HIT',
+103 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+103 verbose headers   server: 'cloudflare',
+103 verbose headers   'cf-request-id': '0240de4b270000fdbdc18ca200000001' }
+104 silly get cb [ 304,
+104 silly get   { date: 'Wed, 22 Apr 2020 00:24:04 GMT',
+104 silly get     connection: 'keep-alive',
+104 silly get     'set-cookie':
+104 silly get      [ '__cfduid=dc638c62b4d379d9a2b3470f5ee2fa5831587515044; expires=Fri, 22-May-20 00:24:04 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+104 silly get     'cf-ray': '587b33250f11fdbd-PDX',
+104 silly get     age: '5884',
+104 silly get     'cache-control': 'public, max-age=300',
+104 silly get     etag: '"b5e5d007e867ac61a1ea8eac8549d80b"',
+104 silly get     'last-modified': 'Wed, 19 Feb 2020 15:26:16 GMT',
+104 silly get     vary: 'Accept-Encoding',
+104 silly get     'cf-cache-status': 'HIT',
+104 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+104 silly get     server: 'cloudflare',
+104 silly get     'cf-request-id': '0240de4b270000fdbdc18ca200000001' } ]
+105 verbose etag https://registry.npmjs.org/serverless-python-requirements from cache
+106 verbose get saving serverless-python-requirements to /home/jesse/.npm/registry.npmjs.org/serverless-python-requirements/.cache.json
+107 http 304 https://registry.npmjs.org/serverless-plugin-resource-tagging
+108 verbose headers { date: 'Wed, 22 Apr 2020 00:24:04 GMT',
+108 verbose headers   connection: 'keep-alive',
+108 verbose headers   'set-cookie':
+108 verbose headers    [ '__cfduid=d1404dc224e2ef267c3f5c56a4e0d84271587515044; expires=Fri, 22-May-20 00:24:04 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+108 verbose headers   'cf-ray': '587b33250dd9fda1-PDX',
+108 verbose headers   age: '6515',
+108 verbose headers   'cache-control': 'public, max-age=300',
+108 verbose headers   etag: '"298c3fc5706c5bbaca0e6a66baa846b0"',
+108 verbose headers   'last-modified': 'Sun, 19 May 2019 05:17:46 GMT',
+108 verbose headers   vary: 'Accept-Encoding',
+108 verbose headers   'cf-cache-status': 'HIT',
+108 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+108 verbose headers   server: 'cloudflare',
+108 verbose headers   'cf-request-id': '0240de4b270000fda10bacc200000001' }
+109 silly get cb [ 304,
+109 silly get   { date: 'Wed, 22 Apr 2020 00:24:04 GMT',
+109 silly get     connection: 'keep-alive',
+109 silly get     'set-cookie':
+109 silly get      [ '__cfduid=d1404dc224e2ef267c3f5c56a4e0d84271587515044; expires=Fri, 22-May-20 00:24:04 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+109 silly get     'cf-ray': '587b33250dd9fda1-PDX',
+109 silly get     age: '6515',
+109 silly get     'cache-control': 'public, max-age=300',
+109 silly get     etag: '"298c3fc5706c5bbaca0e6a66baa846b0"',
+109 silly get     'last-modified': 'Sun, 19 May 2019 05:17:46 GMT',
+109 silly get     vary: 'Accept-Encoding',
+109 silly get     'cf-cache-status': 'HIT',
+109 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+109 silly get     server: 'cloudflare',
+109 silly get     'cf-request-id': '0240de4b270000fda10bacc200000001' } ]
+110 verbose etag https://registry.npmjs.org/serverless-plugin-resource-tagging from cache
+111 verbose get saving serverless-plugin-resource-tagging to /home/jesse/.npm/registry.npmjs.org/serverless-plugin-resource-tagging/.cache.json
+112 silly resolveWithNewModule serverless-s3-sync@1.12.0 checking installable status
+113 silly cache add args [ 'serverless-s3-sync@^1.10.2', null ]
+114 verbose cache add spec serverless-s3-sync@^1.10.2
+115 silly cache add parsed spec Result {
+115 silly cache add   raw: 'serverless-s3-sync@^1.10.2',
+115 silly cache add   scope: null,
+115 silly cache add   name: 'serverless-s3-sync',
+115 silly cache add   rawSpec: '^1.10.2',
+115 silly cache add   spec: '>=1.10.2 <2.0.0',
+115 silly cache add   type: 'range' }
+116 silly addNamed serverless-s3-sync@>=1.10.2 <2.0.0
+117 verbose addNamed ">=1.10.2 <2.0.0" is a valid semver range for serverless-s3-sync
+118 silly addNameRange { name: 'serverless-s3-sync',
+118 silly addNameRange   range: '>=1.10.2 <2.0.0',
+118 silly addNameRange   hasData: false }
+119 silly mapToRegistry name serverless-s3-sync
+120 silly mapToRegistry using default registry
+121 silly mapToRegistry registry https://registry.npmjs.org/
+122 silly mapToRegistry uri https://registry.npmjs.org/serverless-s3-sync
+123 verbose addNameRange registry:https://registry.npmjs.org/serverless-s3-sync not in flight; fetching
+124 silly resolveWithNewModule serverless@1.67.3 checking installable status
+125 silly cache add args [ 'serverless@^1.67.3', null ]
+126 verbose cache add spec serverless@^1.67.3
+127 silly cache add parsed spec Result {
+127 silly cache add   raw: 'serverless@^1.67.3',
+127 silly cache add   scope: null,
+127 silly cache add   name: 'serverless',
+127 silly cache add   rawSpec: '^1.67.3',
+127 silly cache add   spec: '>=1.67.3 <2.0.0',
+127 silly cache add   type: 'range' }
+128 silly addNamed serverless@>=1.67.3 <2.0.0
+129 verbose addNamed ">=1.67.3 <2.0.0" is a valid semver range for serverless
+130 silly addNameRange { name: 'serverless', range: '>=1.67.3 <2.0.0', hasData: false }
+131 silly mapToRegistry name serverless
+132 silly mapToRegistry using default registry
+133 silly mapToRegistry registry https://registry.npmjs.org/
+134 silly mapToRegistry uri https://registry.npmjs.org/serverless
+135 verbose addNameRange registry:https://registry.npmjs.org/serverless not in flight; fetching
+136 silly resolveWithNewModule serverless-python-requirements@5.1.0 checking installable status
+137 silly cache add args [ 'serverless-python-requirements@^5.1.0', null ]
+138 verbose cache add spec serverless-python-requirements@^5.1.0
+139 silly cache add parsed spec Result {
+139 silly cache add   raw: 'serverless-python-requirements@^5.1.0',
+139 silly cache add   scope: null,
+139 silly cache add   name: 'serverless-python-requirements',
+139 silly cache add   rawSpec: '^5.1.0',
+139 silly cache add   spec: '>=5.1.0 <6.0.0',
+139 silly cache add   type: 'range' }
+140 silly addNamed serverless-python-requirements@>=5.1.0 <6.0.0
+141 verbose addNamed ">=5.1.0 <6.0.0" is a valid semver range for serverless-python-requirements
+142 silly addNameRange { name: 'serverless-python-requirements',
+142 silly addNameRange   range: '>=5.1.0 <6.0.0',
+142 silly addNameRange   hasData: false }
+143 silly mapToRegistry name serverless-python-requirements
+144 silly mapToRegistry using default registry
+145 silly mapToRegistry registry https://registry.npmjs.org/
+146 silly mapToRegistry uri https://registry.npmjs.org/serverless-python-requirements
+147 verbose addNameRange registry:https://registry.npmjs.org/serverless-python-requirements not in flight; fetching
+148 silly resolveWithNewModule serverless-wsgi@1.7.4 checking installable status
+149 silly cache add args [ 'serverless-wsgi@^1.7.4', null ]
+150 verbose cache add spec serverless-wsgi@^1.7.4
+151 silly cache add parsed spec Result {
+151 silly cache add   raw: 'serverless-wsgi@^1.7.4',
+151 silly cache add   scope: null,
+151 silly cache add   name: 'serverless-wsgi',
+151 silly cache add   rawSpec: '^1.7.4',
+151 silly cache add   spec: '>=1.7.4 <2.0.0',
+151 silly cache add   type: 'range' }
+152 silly addNamed serverless-wsgi@>=1.7.4 <2.0.0
+153 verbose addNamed ">=1.7.4 <2.0.0" is a valid semver range for serverless-wsgi
+154 silly addNameRange { name: 'serverless-wsgi',
+154 silly addNameRange   range: '>=1.7.4 <2.0.0',
+154 silly addNameRange   hasData: false }
+155 silly mapToRegistry name serverless-wsgi
+156 silly mapToRegistry using default registry
+157 silly mapToRegistry registry https://registry.npmjs.org/
+158 silly mapToRegistry uri https://registry.npmjs.org/serverless-wsgi
+159 verbose addNameRange registry:https://registry.npmjs.org/serverless-wsgi not in flight; fetching
+160 verbose get https://registry.npmjs.org/serverless-s3-sync not expired, no request
+161 silly addNameRange number 2 { name: 'serverless-s3-sync',
+161 silly addNameRange   range: '>=1.10.2 <2.0.0',
+161 silly addNameRange   hasData: true }
+162 silly addNameRange versions [ 'serverless-s3-sync',
+162 silly addNameRange   [ '0.0.1',
+162 silly addNameRange     '1.0.0',
+162 silly addNameRange     '1.1.0',
+162 silly addNameRange     '1.2.0',
+162 silly addNameRange     '1.3.0',
+162 silly addNameRange     '1.4.0',
+162 silly addNameRange     '1.5.0',
+162 silly addNameRange     '1.5.1',
+162 silly addNameRange     '1.6.0',
+162 silly addNameRange     '1.6.1',
+162 silly addNameRange     '1.7.0',
+162 silly addNameRange     '1.7.1',
+162 silly addNameRange     '1.7.2',
+162 silly addNameRange     '1.7.3',
+162 silly addNameRange     '1.8.0',
+162 silly addNameRange     '1.9.0',
+162 silly addNameRange     '1.9.1',
+162 silly addNameRange     '1.9.2',
+162 silly addNameRange     '1.10.0',
+162 silly addNameRange     '1.10.1',
+162 silly addNameRange     '1.10.2',
+162 silly addNameRange     '1.10.3',
+162 silly addNameRange     '1.10.4',
+162 silly addNameRange     '1.10.5',
+162 silly addNameRange     '1.10.6',
+162 silly addNameRange     '1.11.0',
+162 silly addNameRange     '1.12.0' ] ]
+163 silly addNamed serverless-s3-sync@1.12.0
+164 verbose addNamed "1.12.0" is a plain semver version for serverless-s3-sync
+165 silly resolveWithNewModule serverless-plugin-resource-tagging@1.0.11 checking installable status
+166 silly cache add args [ 'serverless-plugin-resource-tagging@^1.0.11', null ]
+167 verbose cache add spec serverless-plugin-resource-tagging@^1.0.11
+168 silly cache add parsed spec Result {
+168 silly cache add   raw: 'serverless-plugin-resource-tagging@^1.0.11',
+168 silly cache add   scope: null,
+168 silly cache add   name: 'serverless-plugin-resource-tagging',
+168 silly cache add   rawSpec: '^1.0.11',
+168 silly cache add   spec: '>=1.0.11 <2.0.0',
+168 silly cache add   type: 'range' }
+169 silly addNamed serverless-plugin-resource-tagging@>=1.0.11 <2.0.0
+170 verbose addNamed ">=1.0.11 <2.0.0" is a valid semver range for serverless-plugin-resource-tagging
+171 silly addNameRange { name: 'serverless-plugin-resource-tagging',
+171 silly addNameRange   range: '>=1.0.11 <2.0.0',
+171 silly addNameRange   hasData: false }
+172 silly mapToRegistry name serverless-plugin-resource-tagging
+173 silly mapToRegistry using default registry
+174 silly mapToRegistry registry https://registry.npmjs.org/
+175 silly mapToRegistry uri https://registry.npmjs.org/serverless-plugin-resource-tagging
+176 verbose addNameRange registry:https://registry.npmjs.org/serverless-plugin-resource-tagging not in flight; fetching
+177 verbose get https://registry.npmjs.org/serverless not expired, no request
+178 silly addNameRange number 2 { name: 'serverless', range: '>=1.67.3 <2.0.0', hasData: true }
+179 silly addNameRange versions [ 'serverless',
+179 silly addNameRange   [ '0.0.1',
+179 silly addNameRange     '0.0.2',
+179 silly addNameRange     '0.0.3',
+179 silly addNameRange     '0.0.4',
+179 silly addNameRange     '0.0.5',
+179 silly addNameRange     '0.0.6',
+179 silly addNameRange     '0.0.7',
+179 silly addNameRange     '0.0.8',
+179 silly addNameRange     '0.0.9',
+179 silly addNameRange     '0.0.10',
+179 silly addNameRange     '0.0.11',
+179 silly addNameRange     '0.0.12',
+179 silly addNameRange     '0.0.13',
+179 silly addNameRange     '0.0.15',
+179 silly addNameRange     '0.1.0',
+179 silly addNameRange     '0.1.1',
+179 silly addNameRange     '0.1.2',
+179 silly addNameRange     '0.1.3',
+179 silly addNameRange     '0.1.4',
+179 silly addNameRange     '0.1.5',
+179 silly addNameRange     '0.2.0',
+179 silly addNameRange     '0.2.1',
+179 silly addNameRange     '0.3.0',
+179 silly addNameRange     '0.3.1',
+179 silly addNameRange     '0.3.2',
+179 silly addNameRange     '0.3.3',
+179 silly addNameRange     '0.4.0',
+179 silly addNameRange     '0.4.1',
+179 silly addNameRange     '0.4.2',
+179 silly addNameRange     '0.5.0',
+179 silly addNameRange     '0.5.1',
+179 silly addNameRange     '0.5.2',
+179 silly addNameRange     '0.5.3',
+179 silly addNameRange     '0.5.4',
+179 silly addNameRange     '0.5.5',
+179 silly addNameRange     '0.5.6',
+179 silly addNameRange     '1.0.0-alpha.1',
+179 silly addNameRange     '1.0.0-alpha.2',
+179 silly addNameRange     '1.0.0-beta.1',
+179 silly addNameRange     '1.0.0-beta.1.1',
+179 silly addNameRange     '1.0.0-beta.2',
+179 silly addNameRange     '1.0.0-rc.1',
+179 silly addNameRange     '1.0.0-rc.2',
+179 silly addNameRange     '1.0.0',
+179 silly addNameRange     '1.0.2',
+179 silly addNameRange     '1.0.3',
+179 silly addNameRange     '1.1.0',
+179 silly addNameRange     '1.2.0',
+179 silly addNameRange     '1.2.1',
+179 silly addNameRange     '1.3.0',
+179 silly addNameRange     '1.4.0',
+179 silly addNameRange     '1.5.0',
+179 silly addNameRange     '1.5.1',
+179 silly addNameRange     '1.6.0',
+179 silly addNameRange     '1.6.1',
+179 silly addNameRange     '1.7.0',
+179 silly addNameRange     '1.8.0',
+179 silly addNameRange     '1.9.0',
+179 silly addNameRange     '1.10.0',
+179 silly addNameRange     '1.10.1',
+179 silly addNameRange     '1.10.2',
+179 silly addNameRange     '1.11.0',
+179 silly addNameRange     '1.12.0',
+179 silly addNameRange     '1.12.1',
+179 silly addNameRange     '1.13.0',
+179 silly addNameRange     '1.13.1',
+179 silly addNameRange     '1.13.2',
+179 silly addNameRange     '1.14.0',
+179 silly addNameRange     '1.15.0',
+179 silly addNameRange     '1.15.1',
+179 silly addNameRange     '1.15.2',
+179 silly addNameRange     '1.15.3',
+179 silly addNameRange     '1.15.4-alpha.1',
+179 silly addNameRange     '1.16.0',
+179 silly addNameRange     '1.16.1',
+179 silly addNameRange     '1.17.0-alpha.1',
+179 silly addNameRange     '1.17.0',
+179 silly addNameRange     '1.18.0',
+179 silly addNameRange     '1.18.1',
+179 silly addNameRange     '1.19.0',
+179 silly addNameRange     '1.20.0',
+179 silly addNameRange     '1.20.1',
+179 silly addNameRange     '1.20.2',
+179 silly addNameRange     '1.21.0',
+179 silly addNameRange     '1.21.1',
+179 silly addNameRange     '1.22.0',
+179 silly addNameRange     '1.23.0',
+179 silly addNameRange     '1.24.0',
+179 silly addNameRange     '1.24.1',
+179 silly addNameRange     '1.25.0',
+179 silly addNameRange     '1.26.0',
+179 silly addNameRange     '1.26.1',
+179 silly addNameRange     '1.27.0',
+179 silly addNameRange     '1.27.1',
+179 silly addNameRange     '1.27.2',
+179 silly addNameRange     '1.27.3',
+179 silly addNameRange     '1.28.0',
+179 silly addNameRange     '1.29.0',
+179 silly addNameRange     '1.29.1',
+179 silly addNameRange     '1.29.2',
+179 silly addNameRange     ... 85 more items ] ]
+180 silly addNamed serverless@1.67.3
+181 verbose addNamed "1.67.3" is a plain semver version for serverless
+182 verbose get https://registry.npmjs.org/serverless-python-requirements not expired, no request
+183 silly addNameRange number 2 { name: 'serverless-python-requirements',
+183 silly addNameRange   range: '>=5.1.0 <6.0.0',
+183 silly addNameRange   hasData: true }
+184 silly addNameRange versions [ 'serverless-python-requirements',
+184 silly addNameRange   [ '1.0.0',
+184 silly addNameRange     '1.1.0',
+184 silly addNameRange     '1.2.0',
+184 silly addNameRange     '2.0.0-beta',
+184 silly addNameRange     '2.0.0-beta.2',
+184 silly addNameRange     '2.0.0-beta.3',
+184 silly addNameRange     '2.0.0-beta.4',
+184 silly addNameRange     '2.0.0-beta.5',
+184 silly addNameRange     '2.0.0-beta.6',
+184 silly addNameRange     '2.0.0-beta.7',
+184 silly addNameRange     '2.0.0',
+184 silly addNameRange     '2.0.1',
+184 silly addNameRange     '2.1.0',
+184 silly addNameRange     '2.1.1',
+184 silly addNameRange     '2.1.2',
+184 silly addNameRange     '2.2.0',
+184 silly addNameRange     '2.2.1',
+184 silly addNameRange     '2.2.2',
+184 silly addNameRange     '2.3.0',
+184 silly addNameRange     '2.3.1',
+184 silly addNameRange     '2.2.3',
+184 silly addNameRange     '2.3.2',
+184 silly addNameRange     '2.2.4',
+184 silly addNameRange     '2.3.3',
+184 silly addNameRange     '2.4.0',
+184 silly addNameRange     '2.4.1',
+184 silly addNameRange     '2.5.0',
+184 silly addNameRange     '3.0.0-beta.1',
+184 silly addNameRange     '3.0.0-beta.2',
+184 silly addNameRange     '3.0.0-beta.3',
+184 silly addNameRange     '3.0.0-beta.4',
+184 silly addNameRange     '3.0.0',
+184 silly addNameRange     '3.0.1',
+184 silly addNameRange     '3.0.2',
+184 silly addNameRange     '3.0.3',
+184 silly addNameRange     '3.0.4',
+184 silly addNameRange     '3.0.5',
+184 silly addNameRange     '3.0.6',
+184 silly addNameRange     '3.0.7',
+184 silly addNameRange     '3.0.8',
+184 silly addNameRange     '3.0.9',
+184 silly addNameRange     '3.0.10',
+184 silly addNameRange     '3.0.11',
+184 silly addNameRange     '3.0.12',
+184 silly addNameRange     '3.1.0',
+184 silly addNameRange     '3.1.1',
+184 silly addNameRange     '3.2.0',
+184 silly addNameRange     '3.2.1',
+184 silly addNameRange     '3.2.2',
+184 silly addNameRange     '3.3.0',
+184 silly addNameRange     '4.0.0-beta',
+184 silly addNameRange     '3.3.1',
+184 silly addNameRange     '4.0.0-beta.2',
+184 silly addNameRange     '4.0.0-beta.3',
+184 silly addNameRange     '4.0.0-beta.4',
+184 silly addNameRange     '4.0.0-beta.5',
+184 silly addNameRange     '4.0.0',
+184 silly addNameRange     '4.0.1',
+184 silly addNameRange     '4.0.2',
+184 silly addNameRange     '4.0.3',
+184 silly addNameRange     '4.0.4',
+184 silly addNameRange     '4.0.5',
+184 silly addNameRange     '4.1.0',
+184 silly addNameRange     '4.1.1',
+184 silly addNameRange     '4.2.0',
+184 silly addNameRange     '4.2.1',
+184 silly addNameRange     '4.2.2',
+184 silly addNameRange     '4.2.3',
+184 silly addNameRange     '4.2.4',
+184 silly addNameRange     '4.2.5',
+184 silly addNameRange     '4.3.0',
+184 silly addNameRange     '5.0.0',
+184 silly addNameRange     '5.0.1',
+184 silly addNameRange     '5.1.0' ] ]
+185 silly addNamed serverless-python-requirements@5.1.0
+186 verbose addNamed "5.1.0" is a plain semver version for serverless-python-requirements
+187 verbose get https://registry.npmjs.org/serverless-wsgi not expired, no request
+188 silly addNameRange number 2 { name: 'serverless-wsgi',
+188 silly addNameRange   range: '>=1.7.4 <2.0.0',
+188 silly addNameRange   hasData: true }
+189 silly addNameRange versions [ 'serverless-wsgi',
+189 silly addNameRange   [ '1.0.0',
+189 silly addNameRange     '1.0.1',
+189 silly addNameRange     '1.0.2',
+189 silly addNameRange     '1.0.3',
+189 silly addNameRange     '1.0.4',
+189 silly addNameRange     '1.1.0',
+189 silly addNameRange     '1.1.1',
+189 silly addNameRange     '1.2.0',
+189 silly addNameRange     '1.2.1',
+189 silly addNameRange     '1.2.2',
+189 silly addNameRange     '1.3.0',
+189 silly addNameRange     '1.3.1',
+189 silly addNameRange     '1.4.0',
+189 silly addNameRange     '1.4.1',
+189 silly addNameRange     '1.4.2',
+189 silly addNameRange     '1.4.3',
+189 silly addNameRange     '1.4.4',
+189 silly addNameRange     '1.4.5',
+189 silly addNameRange     '1.4.6',
+189 silly addNameRange     '1.4.7',
+189 silly addNameRange     '1.4.8',
+189 silly addNameRange     '1.4.9',
+189 silly addNameRange     '1.5.0',
+189 silly addNameRange     '1.5.1',
+189 silly addNameRange     '1.5.2',
+189 silly addNameRange     '1.5.3',
+189 silly addNameRange     '1.6.0',
+189 silly addNameRange     '1.6.1',
+189 silly addNameRange     '1.7.0',
+189 silly addNameRange     '1.7.1',
+189 silly addNameRange     '1.7.2',
+189 silly addNameRange     '1.7.3',
+189 silly addNameRange     '1.7.4' ] ]
+190 silly addNamed serverless-wsgi@1.7.4
+191 verbose addNamed "1.7.4" is a plain semver version for serverless-wsgi
+192 verbose get https://registry.npmjs.org/serverless-plugin-resource-tagging not expired, no request
+193 silly addNameRange number 2 { name: 'serverless-plugin-resource-tagging',
+193 silly addNameRange   range: '>=1.0.11 <2.0.0',
+193 silly addNameRange   hasData: true }
+194 silly addNameRange versions [ 'serverless-plugin-resource-tagging',
+194 silly addNameRange   [ '1.0.0',
+194 silly addNameRange     '1.0.1',
+194 silly addNameRange     '1.0.2',
+194 silly addNameRange     '1.0.3',
+194 silly addNameRange     '1.0.4',
+194 silly addNameRange     '1.0.5',
+194 silly addNameRange     '1.0.6',
+194 silly addNameRange     '1.0.7',
+194 silly addNameRange     '1.0.8',
+194 silly addNameRange     '1.0.9',
+194 silly addNameRange     '1.0.10',
+194 silly addNameRange     '1.0.11' ] ]
+195 silly addNamed serverless-plugin-resource-tagging@1.0.11
+196 verbose addNamed "1.0.11" is a plain semver version for serverless-plugin-resource-tagging
+197 silly cache afterAdd serverless-s3-sync@1.12.0
+198 verbose afterAdd /home/jesse/.npm/serverless-s3-sync/1.12.0/package/package.json not in flight; writing
+199 silly cache afterAdd serverless@1.67.3
+200 verbose afterAdd /home/jesse/.npm/serverless/1.67.3/package/package.json not in flight; writing
+201 silly cache afterAdd serverless-python-requirements@5.1.0
+202 verbose afterAdd /home/jesse/.npm/serverless-python-requirements/5.1.0/package/package.json not in flight; writing
+203 silly cache afterAdd serverless-wsgi@1.7.4
+204 verbose afterAdd /home/jesse/.npm/serverless-wsgi/1.7.4/package/package.json not in flight; writing
+205 silly cache afterAdd serverless-plugin-resource-tagging@1.0.11
+206 verbose afterAdd /home/jesse/.npm/serverless-plugin-resource-tagging/1.0.11/package/package.json not in flight; writing
+207 verbose afterAdd /home/jesse/.npm/serverless-s3-sync/1.12.0/package/package.json written
+208 verbose afterAdd /home/jesse/.npm/serverless/1.67.3/package/package.json written
+209 verbose afterAdd /home/jesse/.npm/serverless-python-requirements/5.1.0/package/package.json written
+210 verbose afterAdd /home/jesse/.npm/serverless-wsgi/1.7.4/package/package.json written
+211 verbose afterAdd /home/jesse/.npm/serverless-plugin-resource-tagging/1.0.11/package/package.json written
+212 silly rollbackFailedOptional Starting
+213 silly rollbackFailedOptional Finishing
+214 silly runTopLevelLifecycles Starting
+215 silly runTopLevelLifecycles Finishing
+216 silly install printInstalled
+217 verbose stack Error: EISDIR: illegal operation on a directory, read
+218 verbose cwd /home/jesse/django/api
+219 error Linux 5.3.0-46-generic
+220 error argv "/usr/bin/node" "/usr/bin/npm" "i"
+221 error node v8.10.0
+222 error npm  v3.5.2
+223 error code EISDIR
+224 error errno -21
+225 error syscall read
+226 error eisdir EISDIR: illegal operation on a directory, read
+227 error eisdir This is most likely not a problem with npm itself
+227 error eisdir and is related to npm not being able to find a package.json in
+227 error eisdir a package you are trying to install.
+228 verbose exit [ -21, true ]
