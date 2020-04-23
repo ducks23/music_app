@@ -3,12 +3,18 @@ from rest_framework import serializers
 
 
 class SongSerializer(serializers.ModelSerializer):
+    '''
+    song serializer with respective fields for each song
+    '''
     class Meta:
         model = Song
         fields = ('id', 'name', 'num_stars', 'from_album')
 
 
 class AlbumSerializer(serializers.ModelSerializer):
+    ''' 
+    serializes the data for each album. song_album field is where the song objects are nested
+    '''
     song_album = SongSerializer(read_only=True, many=True)
 
     class Meta:
@@ -23,8 +29,10 @@ class AlbumSerializer(serializers.ModelSerializer):
                     )
 
     def create(self, validated_data):
+        '''
+        this function posts an album. checks if there is songs assigned to it
+        '''
         songs_data = None
-        # use a try catch so that code doesn't break if there is no song data
         try:
             songs_data = validated_data.pop('song_album')
         except Exception as e:
@@ -36,6 +44,9 @@ class AlbumSerializer(serializers.ModelSerializer):
         return album
 
     def update(self, instance, validated_data):
+        '''
+        update function that also keeps the nested song data in tact 
+        '''
         songs_data = validated_data.pop('song_album')
         songs = (instance.song_album).all()
         songs = list(songs)
@@ -53,6 +64,9 @@ class AlbumSerializer(serializers.ModelSerializer):
 
 
 class MusicianSerializer(serializers.ModelSerializer):
+    '''
+    serializes the musican data. album_musician is where the albums are nested
+    '''
     album_musician = AlbumSerializer(read_only=True, many=True)
 
     class Meta:
@@ -66,6 +80,9 @@ class MusicianSerializer(serializers.ModelSerializer):
                     )
 
     def create(self, validated_data):
+        '''
+        posts a musician
+        '''
         albums_data = None
         try:
             albums_data = validated_data.pop('album_musician')
@@ -78,6 +95,9 @@ class MusicianSerializer(serializers.ModelSerializer):
         return musician
 
     def update(self, instance, validated_data):
+        '''
+        update loops through saved albums and keeps them when updated
+        '''
         albums_data = validated_data.pop('album_musician')
         albums = (instance.album_musician).all()
         albums = list(albums)
