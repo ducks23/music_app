@@ -12,8 +12,9 @@ class SongSerializer(serializers.ModelSerializer):
 
 
 class AlbumSerializer(serializers.ModelSerializer):
-    ''' 
-    serializes the data for each album. song_album field is where the song objects are nested
+    '''
+    serializes the data for each album.
+    song_album field is where the song objects are nested
     '''
     song_album = SongSerializer(read_only=True, many=True)
 
@@ -45,7 +46,7 @@ class AlbumSerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
         '''
-        update function that also keeps the nested song data in tact 
+        update function that also keeps the nested song data in tact
         '''
         songs_data = validated_data.pop('song_album')
         songs = (instance.song_album).all()

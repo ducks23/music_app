@@ -33,7 +33,7 @@ class AlbumList(APIView):
     url: 'musicians/<int:pk>/albums
     '''
     serializer_class = AlbumSerializer
-    
+
     def get(self, request, musician_pk, format=None):
         musician = Musician.objects.get(id=musician_pk)
         serializer = MusicianSerializer(instance=musician)
@@ -50,7 +50,7 @@ class AlbumList(APIView):
 
 class AlbumDetail(APIView):
     '''
-    detail of specified album in respect to musician 
+    detail of specified album in respect to musician
     url: 'musicians/<int:pk>/albums/<int:pk>
     '''
     serializer_class = AlbumSerializer
@@ -79,7 +79,6 @@ class AlbumDetail(APIView):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
-
 
 
 class SongList(APIView):
