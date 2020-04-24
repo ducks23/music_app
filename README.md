@@ -1,1 +1,2 @@
-# Django application that builds a nested library with Sql tables
+# nested_api_django
+# nested_api_django
